@@ -25,12 +25,6 @@
             max-width: 500px;
         }
 
-        .description-box h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.5rem;
-            margin-bottom: 15px;
-        }
-
         .info-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -42,83 +36,132 @@
             background: #ffffff;
             padding: 30px;
             border-radius: 15px;
-            transition: all 0.3s ease;
             border: 1px solid #eee;
         }
 
-        .info-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            background-color: #fff9f5;
-        }
-
-        .info-card h3 {
-            color: #d4a373; 
-            font-size: 1.4rem;
-            margin-bottom: 10px;
-            border-bottom: 2px solid #f0ead2;
-            display: inline-block;
+        button {
+            margin: 6px;
+            padding: 8px 14px;
+            cursor: pointer;
         }
     </style>
 </head>
+
 <body>
 
-    <header>
-        <h1 style="font-family: 'Playfair Display', serif; font-size: 3.5rem; margin: 0; color: #2d3436;">
-            Arya Aruja
-        </h1>
-        <p class="designation">Aspiring Software Engineer</p>
-    </header>
+<header>
+    <h1 style="font-family: 'Playfair Display', serif; font-size: 3.5rem; margin: 0;">
+        Arya Aruja
+    </h1>
+    <p class="designation">Aspiring Software Engineer</p>
+</header>
 
-    <div class="container">
-        <section class="intro-flex">
-            <img src="Image.jpg.jpeg" alt="profile image" class="profile-img">
-            
-            <div class="description-box">
-                <h2>The Vision</h2>
-                <p style="color: #636e72; font-style: italic;"> "Building the bridge between complex backend logic and seamless user experiences."
-                </p>
-                <p>
-                  I am a dedicated software engineering student focused on developing efficient, scalable, and user-centric applications. 
-                    My technical foundation includes a strong understanding of core programming principles, modern web technologies, 
-                    and a commitment to writing clean, maintainable code.
-                </p>
-            </div>
-        </section>
+<div class="container">
 
-        <section class="info-grid">
-            <div class="info-card">
-                <h3>Hobbies</h3>
-                <p>Deep-diving into technical blogs, UI exploration, and competitive programming.</p>
-            </div>
+    <!-- INTRO SECTION -->
+    <section class="intro-flex">
+        <img src="Image.jpg.jpeg" alt="profile image" class="profile-img">
 
-            <div class="info-card">
-                <h3>Passion</h3>
-                <p>Architecting clean interfaces and mastering the art of DevOps automation.</p>
-            </div>
+        <div class="description-box">
+            <h2>The Vision</h2>
 
-            <div class="info-card">
-                <h3>Past Work</h3>
-                <p>Full-stack academic projects and interactive UI prototypes using modern frameworks.</p>
-            </div>
+            <p style="color: #636e72; font-style: italic;">
+                "Building the bridge between complex backend logic and seamless user experiences."
+            </p>
 
-            <div class="info-card">
-                <h3>Social Life</h3>
-                <p>Active contributor to tech forums and a frequent attendee of local developer meetups.</p>
-            </div>
-        </section>
-    </div>
+            <p id="aboutText">
+                I am a dedicated software engineering student focused on developing efficient,
+                scalable, and user-centric applications. My technical foundation includes a strong
+                understanding of core programming principles, modern web technologies, and a
+                commitment to writing clean, maintainable code.
+            </p>
 
-    <footer>
-        <p style="margin-bottom: 20px; font-weight: 600;">Let's build something together.</p>
-        <div class="links">
-            <a href="https://www.linkedin.com/feed/">LinkedIn</a>
-            <a href="https://github.com/">GitHub</a>
-            <a href="#">Instagram</a>
-            <a href="#">Contact Email</a>
+            <!-- DOM TASK 1 -->
+            <button onclick="changeText()">Change Text</button>
         </div>
-        <p style="font-size: 0.8rem; margin-top: 30px; opacity: 0.6;">&copy; 2024.arya aruja@ves.ac.in. All rights reserved.</p>
-    </footer>
+    </section>
+
+    <!-- DOM TASK 2 & 3 -->
+    <section>
+        <h2>Skills (DOM Manipulation)</h2>
+        <ul id="skillList"></ul>
+        <button onclick="addSkill()">Add Skill</button>
+        <button onclick="removeSkill()">Remove Last Skill</button>
+    </section>
+
+    <!-- DOM TASK 4 -->
+    <section>
+        <h2>Change Background Color</h2>
+        <button onclick="changeColor('#fcfaf7')">Default</button>
+        <button onclick="changeColor('#e3f2fd')">Blue</button>
+        <button onclick="changeColor('#fce4ec')">Pink</button>
+        <button onclick="changeColor('#e8f5e9')">Green</button>
+    </section>
+
+    <!-- ORIGINAL INFO GRID (FULLY RESTORED) -->
+    <section class="info-grid">
+        <div class="info-card">
+            <h3>Hobbies</h3>
+            <p>Deep-diving into technical blogs, UI exploration, and competitive programming.</p>
+        </div>
+
+        <div class="info-card">
+            <h3>Passion</h3>
+            <p>Architecting clean interfaces and mastering the art of DevOps automation.</p>
+        </div>
+
+        <div class="info-card">
+            <h3>Past Work</h3>
+            <p>Full-stack academic projects and interactive UI prototypes using modern frameworks.</p>
+        </div>
+
+        <div class="info-card">
+            <h3>Social Life</h3>
+            <p>Active contributor to tech forums and a frequent attendee of local developer meetups.</p>
+        </div>
+    </section>
+
+</div>
+
+<footer>
+    <p style="margin-bottom: 20px; font-weight: 600;">Let's build something together.</p>
+    <div class="links">
+        <a href="https://www.linkedin.com/feed/">LinkedIn</a>
+        <a href="https://github.com/">GitHub</a>
+        <a href="#">Instagram</a>
+        <a href="#">Contact Email</a>
+    </div>
+    <p style="font-size: 0.8rem; margin-top: 30px; opacity: 0.6;">
+        &copy; 2024.arya aruja@ves.ac.in. All rights reserved.
+    </p>
+</footer>
+
+<script>
+    function changeText() {
+        document.getElementById("aboutText").innerText =
+        "I enjoy working on real-world projects that combine clean UI design with strong backend logic. I am continuously learning new technologies, improving my problem-solving skills, and aiming to grow as a full-stack software engineer.";
+    }
+
+    let count = 1;
+
+    function addSkill() {
+        const li = document.createElement("li");
+        li.innerText = "Skill " + count;
+        document.getElementById("skillList").appendChild(li);
+        count++;
+    }
+
+    function removeSkill() {
+        const list = document.getElementById("skillList");
+        if (list.lastElementChild) {
+            list.removeChild(list.lastElementChild);
+        }
+    }
+
+    function changeColor(color) {
+        document.body.style.backgroundColor = color;
+    }
+</script>
 
 </body>
 </html>
