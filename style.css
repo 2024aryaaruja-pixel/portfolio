@@ -32,53 +32,6 @@ header {
     display: block;
 }
 
-.info-card {
-    background: #ffffff;
-    padding: 30px;
-    border-radius: 15px;
-    transition: all 0.3s ease;
-    border: 1px solid #eee;
-}
-
-.info-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-    background-color: #fff9f5;
-}
-
-.info-card h3 {
-    color: #d4a373;
-    font-size: 1.4rem;
-    margin-bottom: 10px;
-    border-bottom: 2px solid #f0ead2;
-    display: inline-block;
-}
-
-button {
-    padding: 8px 16px;
-    margin: 6px;
-    border: none;
-    border-radius: 6px;
-    background-color: #d4a373;
-    color: white;
-    font-size: 0.9rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-button:hover {
-    background-color: #b5835a;
-}
-
-ul {
-    list-style-type: circle;
-    padding-left: 20px;
-}
-
-li {
-    margin: 6px 0;
-}
-
 footer {
     background-color: #2d3436;
     color: #ecf0f1;
@@ -92,8 +45,4 @@ footer a {
     color: #a8dadc;
     margin: 0 15px;
     font-weight: 500;
-}
-
-footer a:hover {
-    text-decoration: underline;
 }
